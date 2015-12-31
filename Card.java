@@ -37,14 +37,19 @@ public class Card {
 	String[] colors = {"red","blue","green"};
 	String[] shapes = {"O","X","S"};
 	String[] shadings = {"{}","()","[]"};
+	System.out.println("\t A           B           C");
 	for (int i=0; i<3; i++) {
+	    System.out.print("\u001B[0m" + i + "\t ");
 	    for (int x=0; x<3; x++) {
 		int n = (int)( Math.random() * 3 );
 		int c = (int)( Math.random() * 3 );
 		int p = (int)( Math.random() * 3 );
 		int d = (int)( Math.random() * 3 );
 		Card a = new Card(n+1, colors[c], shapes[p], shadings[d]);
-		System.out.print("\t" + a);
+		System.out.print(a);
+		for (int y=0; y<9-n*3; y++) {
+		    System.out.print(" ");
+		}
 	    }
 	    System.out.println();
 	}
