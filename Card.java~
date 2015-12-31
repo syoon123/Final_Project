@@ -1,0 +1,27 @@
+public class Card {
+    private int num;
+    private String color;
+    private String shape;
+    private String shading;
+    public Card(int n, String c, String p, String d) {
+	num = n;
+	color = c;
+	shape = p;
+	shading = d;
+    }
+    public int getNum() {
+	return num;
+    }
+    public String getColor() {
+	return color;
+    }
+    public String getShape() {
+	return shape;
+    }
+    public String getShading() {
+	return shading;
+    }
+    public String toString() {
+	return "";
+    }
+}
